@@ -59,3 +59,11 @@ In main.tsx remove:
 ```javascript
 import './index.css'
 ```
+
+### Permission errors on Mac?
+In a new terminal window:
+```bash
+sudo chown -R <their username> <path to folder for permission>
+```
+- Username is the username being used on your machine.  
+- Path to folder should be the path to the project folder.

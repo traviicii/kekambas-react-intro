@@ -1,30 +1,61 @@
-# React + TypeScript + Vite
+# React application setup with Vite
+---
+### Initialize Vite + React
+```bash
+npm create vite@latest
+```
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ 1. Enter name of project
+ 2. Select React
+ 3. Select TypeScript
 
-Currently, two official plugins are available:
+### cd into project folder
+```bash
+  cd <project-name>
+  npm install
+  npm run dev
+  ```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Create git repository
+```git
+git init
+git add .
+git commit -m "Initial Commit"
+```
 
-## Expanding the ESLint configuration
+## Cleaup file structure
+- Remove vite.svg in Public Folder
+- Delete Assets folder
+- Delete App.css
+- Delete index.css
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+#### Current File Stucture
+```
+public
+scr
+    - App.tsx
+    - main.tsx
+.eslintrc.cjs
+.gitignore
+index.html
+package-lock.json
+package.json
+tsconfig.node.jason
+vite.config.ts
+```
 
-- Configure the top-level `parserOptions` property like this:
+## Resolve errors from deletions
+### in main.tsx
+Delete everything in app.tsx
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
+Replace with:
+```javascript
+export default function App(){
+  return <h1>Hello world</h1>
 }
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+In main.tsx remove:
+```javascript
+import './index.css'
+```

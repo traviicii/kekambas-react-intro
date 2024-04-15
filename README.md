@@ -32,7 +32,7 @@ git commit -m "Initial Commit"
 #### Current File Stucture
 ```
 public
-scr
+src
     - App.tsx
     - main.tsx
 .eslintrc.cjs

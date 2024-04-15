@@ -23,7 +23,7 @@ git add .
 git commit -m "Initial Commit"
 ```
 
-## Cleaup file structure
+## Clean up file structure
 - Remove vite.svg in Public Folder
 - Delete Assets folder
 - Delete App.css
